@@ -1,20 +1,24 @@
 import React from 'react'
-import CircularText from '../ui/CircularText'
-import CurvedSection from '../ui/Curved'
-import { assets } from '../../assets/assets'
+import CircularBadge from '../ui/CircularBadge'
 
 const JourneySection = () => {
   return (
-    
-        <section className='min-h-screen bg-amber-100 mt-12'>
-          <CurvedSection curve='tr'>
+        <section className='min-h-screen bg-amber-100 mt-12 p-12 border rounded-se-full'>
           <div className='flex items-center justify-between'>
             <h1 className='text-5xl text-black'>Design Journey</h1>
-            <CircularText text='Open to Work * Open to Work * ' className='font-[sans-serif]'>
-              <img src={assets[0]} alt='profile_img' className='object-cover'/>
-            </CircularText>
+            <CircularBadge className='font-[sans-serif]' />
           </div>
-          </CurvedSection>
+
+          {/* Experience & SkillSets */}
+          {/* Left Side */}
+              <div className="w-1/2">
+
+              </div>
+
+          {/* Right Side */}
+              <div className="w-1/2">
+      
+              </div>
         </section>
     
   )

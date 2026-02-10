@@ -16,8 +16,8 @@ export default function Navbar() {
     <nav 
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-700 ease-in-out ${
         scrolled 
-          ? 'bg-white/90 backdrop-blur-xl border-b border-white/10' 
-          : 'bg-[#FFFEFA] backdrop-blur-sm border-b border-transparent'
+          ? 'bg-[#faf7ed]/95 backdrop-blur-xl border-b border-black/10' 
+          : 'bg-transparent border-b border-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-12 py-6">
@@ -26,15 +26,17 @@ export default function Navbar() {
           <div className={`flex items-center gap-3 transition-all duration-700 ease-in-out ${
             scrolled ? 'opacity-100' : 'opacity-0 pointer-events-none'
           }`}>
+            {/* Profile image will appear here from Hero component */}
             <div className="w-11 h-11"></div>
+            {/* Name will appear here from Hero component */}
           </div>
 
           {/* Navigation Links */}
           <div className="flex items-center gap-12">
-            {/* About - starts off-screen left, moves to center on scroll */}
+            {/* Projects - moves from off-screen left */}
             <a 
               href="#projects"
-              className="relative font-medium text-sm tracking-[0.2em] text-black hover:text-amber-950 transition-colors duration-300"
+              className="relative font-medium text-sm tracking-[0.2em] uppercase text-gray-700 hover:text-black transition-colors duration-300"
               style={{
                 transform: scrolled ? 'translateX(0)' : 'translateX(-900px)',
                 transition: 'transform 0.7s cubic-bezier(0.4, 0, 0.2, 1)',
@@ -43,9 +45,10 @@ export default function Navbar() {
               Projects
             </a>
 
+            {/* About - moves from off-screen left */}
             <a 
               href="#about"
-              className="relative font-medium text-sm tracking-[0.2em] text-black hover:text-amber-950 transition-colors duration-300"
+              className="relative font-medium text-sm tracking-[0.2em] uppercase text-gray-700 hover:text-black transition-colors duration-300"
               style={{
                 transform: scrolled ? 'translateX(0)' : 'translateX(-500px)',
                 transition: 'transform 0.7s cubic-bezier(0.4, 0, 0.2, 1)',
@@ -57,7 +60,7 @@ export default function Navbar() {
             {/* Resume - always stays at navbar-end */}
             <a 
               href="#resume"
-              className="btn btn-neutral rounded-full bg-transparent relative font-medium text-sm tracking-[0.2em] text-black hover:text-amber-950 transition-colors duration-300"
+              className="relative font-medium text-sm tracking-[0.2em] uppercase text-gray-700 hover:text-black transition-colors duration-300"
             >
               Resume
             </a>

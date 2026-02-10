@@ -1,16 +1,17 @@
 import React from 'react'
-import CurvedSection from '../ui/Curved'
 import { assets } from '../../assets/assets'
 import { Link } from 'react-router-dom'
+import Typewriter from '../ui/TypeWriter'
 
 
 const ProjectsSection = () => {
   return (
-      <section className="relative min-h-screen px-12 pt-12 overflow-hidden">
-        <CurvedSection curve='tr' className='bg-gray-500'>
+      <section className="relative min-h-screen px-12 pt-12 overflow-hidden border rounded-es-full">
        <div className='flex items-center justify-center'>
         {/* Header Title */}
-          <h1 className='font-["sans-serif"] text-5xl text-black'>A peak into My playground of Work</h1>
+          <Typewriter 
+          text={`A peak into My playground of Work`}
+          className='font-["sans-serif"] text-5xl text-black' />
        </div>
 
        {/* Project Grids */}
@@ -22,10 +23,6 @@ const ProjectsSection = () => {
                 alt="Kz-project" 
                 className='w-full h-full object-cover cursor-pointer transition-transform hover:scale-110'/>
             </figure>
-            <div className="card-body font-[sans-serif]">
-              <h2 className="card-title text-4xl">E-commerce</h2>
-              <p className='text-2xl'>KartZon</p>
-            </div>
           </div>
 
           <div className="card w-120 bg-transparent shadow-none border-0">
@@ -35,10 +32,6 @@ const ProjectsSection = () => {
                 alt="Shoes" 
                 className='w-full h-full object-cover cursor-pointer transition-transform hover:scale-110'/>
             </figure>
-            <div className="card-body font-[sans-serif]">
-              <h2 className="card-title text-4xl">Frontend </h2>
-              <p className='text-2xl'>Bonkers</p>
-            </div>
           </div>
 
           <div className="card w-120 bg-transparent shadow-none border-0">
@@ -48,10 +41,6 @@ const ProjectsSection = () => {
                 alt="Shoes" 
                 className='w-full h-full object-cover cursor-pointer transition-transform hover:scale-110'/>
             </figure>
-            <div className="card-body font-[sans-serif]">
-              <h2 className="card-title text-4xl">Pixel Perfect - UI</h2>
-              <p className='text-2xl'>FloraVision</p>
-            </div>
           </div>
 
           <div className="card w-120 bg-transparent shadow-none border-0">
@@ -61,17 +50,12 @@ const ProjectsSection = () => {
                 alt="Shoes" 
                 className='w-full h-full object-cover cursor-pointer transition-transform hover:scale-105'/>
             </figure>
-            <div className="card-body font-[sans-serif]">
-              <h2 className="card-title text-4xl">CRUD</h2>
-              <p className='text-2xl'>ThinkBoard</p>
-            </div>
           </div>
         </div>
 
-        <Link to={'/projects'} className='flex items-center justify-center space-y-6'>
+        <Link to={'/projects'} className='flex items-center justify-start space-y-6 z-50'>
           <button className='btn btn-accent rounded-full transition-transform hover:scale-105 hover:bg-amber-950'>View more projects</button>
         </Link>
-        </CurvedSection>
       </section>
   )
 }
