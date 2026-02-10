@@ -1,18 +1,19 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
-import Hero from '../components/Hero'
-import Intro from '../components/Intro'
-import ProjectsSection from '../components/ProjectsSection'
+import Navbar from '../components/layout/Navbar'
+import ProjectsSection from '../components/sections/ProjectsSection'
+import HeroSection from '../components/sections/HeroSection'
+import JourneySection from '../components/sections/JourneySection'
+
 
 
 
 const HomePage = () => {
   return (
-    <div>
+    <div className='min-h-screen bg-gray-200'>
       <Navbar />
-      <Hero />
-      <Intro />
+      <HeroSection />
       <ProjectsSection />
+      <JourneySection />
     </div>
   )
 }
